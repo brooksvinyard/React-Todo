@@ -2,6 +2,8 @@ import React from 'react';
 import ToDoList from './components/TodoComponents/TodoList';
 import ToDoForm from './components/TodoComponents/TodoForm';
 
+import './index.css';
+
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -49,12 +51,25 @@ class App extends React.Component {
     });
   };
 
+  // Make task completed
+  taskDone = taskID => {
+    this.setState({
+      todos: this.state.todos.map(task => {
+        if (taskID === task.id) {
+          return {...task, completed: !task.completed };
+        }
+        return task;
+      })
+    });
+  };
+
+
   render() {
     return (
-      <div>
+      <div className="app">
         <h2>Todo List: MVP</h2>
         <div className="todo-list">
-          <ToDoList todos={this.state.todos} />
+          <ToDoList todos={this.state.todos} taskDone={this.taskDone} />
         </div>
         <ToDoForm
           value={this.state.todo}

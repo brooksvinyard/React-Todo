@@ -6,8 +6,8 @@ import React from 'react';
 
 function ToDo(props) {
   return (
-    <div className="todo notcompleted">
-        <div> {props.todo.task}</div>
+    <div className={`todo${props.todo.completed ? ' completed' : ''}`} onClick={() => props.taskDone(props.todo.id)} >
+            {props.todo.task}
     </div>
   );
 }

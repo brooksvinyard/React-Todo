@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+.app {
+    width: 500px;
+    background-color: rgb(119, 136, 136);
+    color: whitesmoke;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.app h2 {
+    text-align: center;
+    font-size: 3.2rem;
+    padding-bottom: 10px;
+    color: rgb(75, 76, 77);
+}
+
+.todo {
+    line-height: 1.5;
+    font-size: 2.6rem;
+    padding-bottom: 10px;
+    color: rgb(75, 76, 77);
+}
+
+.completed {
+    color: dimgrey;
+    text-decoration: line-through;
+}
