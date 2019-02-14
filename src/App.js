@@ -63,11 +63,17 @@ class App extends React.Component {
     });
   };
 
+  clearCompleted = e => {
+    e.preventDefault();
+    this.setState({
+      todos: this.state.todos.filter(task => !task.completed)
+    })
+  };
 
   render() {
     return (
       <div className="app">
-        <h2>Todo List: MVP</h2>
+        <h2>Todo List:</h2>
         <div className="todo-list">
           <ToDoList todos={this.state.todos} taskDone={this.taskDone} />
         </div>
@@ -75,6 +81,7 @@ class App extends React.Component {
           value={this.state.todo}
           addTask={this.addTask}
           handleChanges={this.handleChanges}
+          clearCompleted={this.clearCompleted}
         />
       </div>
     );

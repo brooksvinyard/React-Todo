@@ -8,7 +8,7 @@ import ToDo from './Todo';
 
 const ToDoList = props => {
     return (
-        <div className = "todo">
+        <div className = "todo-list">
             {props.todos.map(todo => ( <ToDo key={todo.id} todo={todo} taskDone={props.taskDone} /> ))}
         </div>
     )
