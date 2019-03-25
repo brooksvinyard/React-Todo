@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+.app {
+    width: 500px;
+    background-color: #c0c0c3;
+    padding: 2%;
+    border-radius: 10px;
+    margin: 10% 20%;
+}
+
+.app h2 {
+    text-align: center;
+    font-size: 5.5rem;
+    padding-bottom: 10px;
+    color: rgb(75, 76, 77);
+}
+
+.todo-list {
+    background-color: antiquewhite;
+}
+
+.todo {
+    line-height: 1.5;
+    font-size: 2.6rem;
+    padding-bottom: 10px;
+    color: rgb(75, 76, 77);
+    border-top: 1px solid black;
+}
+
+.enter-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+input {
+    background-color: lightgray;
+    width: 75%;
+    height: 50px;
+    font-size: 2.6rem;
+}
+
+button {
+  background-color: rgb(75, 76, 77);
+  border: 1px solid black;
+  color: white;
+  font-size: 16px;
+  padding: 6px 14px;
+  width: 20%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.completed-line {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.completed-line button {
+    width: 40%;
+}
+
+
+.completed {
+    color: dimgrey;
+    text-decoration: line-through;
+}
